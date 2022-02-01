@@ -125,4 +125,4 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ------------
 **Telegram**
 ------------
-[Senovpn](https://t.me/senovpn)
+[gyrovpn](https://t.me/gyroelite)
