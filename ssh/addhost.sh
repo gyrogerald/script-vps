@@ -12,8 +12,16 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/perizinan/main/ipvps.txt | grep $MYIP )
-
+echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/geraldyolang11/perizinan/main/ipvps.txt | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/gyroelite"
+exit 0
+fi
 clear
 read -rp "Domain/Host : " -e domain
 echo "IP=$domain" >>/var/lib/akbarstorevpn/ipvps.conf
