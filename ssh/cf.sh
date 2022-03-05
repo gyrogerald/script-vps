@@ -29,21 +29,21 @@ clear
 apt install jq curl -y
 DOMAIN=installer.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c6)
-SUB_DOMAIN=${sub}.installer.my.id
-CF_ID=senowahyu62@gmail.com
-CF_KEY=84570683099becbeb0f04d8086ce6f309c56c
+SUB_DOMAIN=${sub}.kizuma.cf
+CF_ID=geraldy.olang@gmail.com
+CF_KEY=7e4beb2b60f992a15f4c65f11caa3faea0855
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" | jq -r .result[0].id)
+     -H "Content-Type: application/json" | jq -r .result[0].cf)
 
 RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" | jq -r .result[0].id)
+     -H "Content-Type: application/json" | jq -r .result[0].cf)
 
 if [[ "${#RECORD}" -le 10 ]]; then
      RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
@@ -66,12 +66,12 @@ echo "Updating DNS for ${WILD_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" | jq -r .result[0].id)
+     -H "Content-Type: application/json" | jq -r .result[0].cf)
 
 RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${WILD_DOMAIN}" \
      -H "X-Auth-Email: ${CF_ID}" \
      -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" | jq -r .result[0].id)
+     -H "Content-Type: application/json" | jq -r .result[0].cf)
 
 if [[ "${#RECORD}" -le 10 ]]; then
      RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
