@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geraldyolang11/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/gyrogerald/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
@@ -27,7 +27,7 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/gyroelite"
 exit 0
 fi
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/geraldyolang11/script-vps/main/shadowsocks"
+akbarvpn="raw.githubusercontent.com/gyrogerald/script-vps/main/shadowsocks"
 
 source /etc/os-release
 OS=$ID
