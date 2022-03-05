@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geraldyolang11/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/gyrogerald/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
@@ -23,7 +23,7 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/gyroelite"
 exit 0
 fi
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/geraldyolang11/script-vps/main/backup"
+akbarvpn="raw.githubusercontent.com/gyrogerald/script-vps/main/backup"
 
 apt install rclone -y
 printf "q\n" | rclone config
