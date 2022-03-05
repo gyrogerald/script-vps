@@ -31,7 +31,7 @@ DOMAIN=installer.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c6)
 SUB_DOMAIN=${sub}.kizuma.cf
 CF_ID=geraldy.olang@gmail.com
-CF_KEY=7e4beb2b60f992a15f4c65f11caa3faea0855
+CF_KEY=_wvccSewuUd0DPay_svXu4HknFML478gbNIy7Hj1
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
