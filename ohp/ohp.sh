@@ -1,6 +1,6 @@
 #!/bin/bash
 # Ohp Script
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/gyroelite
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geraldyolang11/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/gyrogerald/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
