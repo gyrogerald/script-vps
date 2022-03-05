@@ -19,30 +19,30 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-akbarvpn="raw.githubusercontent.com/geraldyolang11/script-vps/main/ssh"
+akbarvpn="raw.githubusercontent.com/gyrogerald/script-vps/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-akbarvpnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/sstp"
+akbarvpnn="raw.githubusercontent.com/gyrogerald/script-vps/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-akbarvpnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/ssr"
+akbarvpnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-akbarvpnnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/shadowsocks"
+akbarvpnnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-akbarvpnnnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/wireguard"
+akbarvpnnnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-akbarvpnnnnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/xray"
+akbarvpnnnnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-akbarvpnnnnnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/ipsec"
+akbarvpnnnnnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-akbarvpnnnnnnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/backup"
+akbarvpnnnnnnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/backup"
 # Link Hosting Kalian Untuk Websocket
-akbarvpnnnnnnnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/websocket"
+akbarvpnnnnnnnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-akbarvpnnnnnnnnnn="raw.githubusercontent.com/geraldyolang11/script-vps/main/ohp"
+akbarvpnnnnnnnnnn="raw.githubusercontent.com/gyrogerald/script-vps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geraldyolang11/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/gyrogerald/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
@@ -94,7 +94,7 @@ rm -f /root/ohp.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://t.me/Akbar218
+Documentation=https://t.me/gyroelite
 
 [Service]
 Type=oneshot
