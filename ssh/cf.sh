@@ -27,7 +27,7 @@ exit 0
 fi
 clear
 apt install jq curl -y
-DOMAIN=installer.my.id
+DOMAIN=kizuma.cf
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c6)
 SUB_DOMAIN=${sub}.kizuma.cf
 CF_ID=geraldy.olang@gmail.com
